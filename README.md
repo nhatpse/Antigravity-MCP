@@ -10,12 +10,12 @@ One command to clone, install, and configure everything automatically for **Anti
 
 **Windows (PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/nhatpse/Antigravity-MCP/v1.3.2/install.ps1 | iex
+irm https://raw.githubusercontent.com/nhatpse/Antigravity-MCP/v1.3.3/install.ps1 | iex
 ```
 
 **Linux / macOS:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nhatpse/Antigravity-MCP/v1.3.2/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/nhatpse/Antigravity-MCP/v1.3.3/install.sh | bash
 ```
 
 > The installer will: clone the repo → install dependencies → configure MCP server → add coding rules. Just restart Antigravity after it finishes.

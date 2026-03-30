@@ -39,8 +39,9 @@ ANTIGRAVITY_DIR="$GEMINI_DIR/antigravity"
 MCP_CONFIG_FILE="$ANTIGRAVITY_DIR/mcp_config.json"
 GEMINI_MD_FILE="$GEMINI_DIR/GEMINI.md"
 
-CODING_RULE='Whenever you want to ask a question, always call the MCP interactive_feedback (exact tool name: mcp_interactive-feedback-mcp_interactive_feedback).
-Whenever you'\''re about to complete a user request, call the MCP interactive_feedback instead of simply ending the process. Keep calling MCP until the user'\''s feedback is empty, then end the request.'
+CODING_RULE='Whenever you want to ask a question or need user feedback, always call the MCP interactive_feedback (exact tool name: mcp_interactive-feedback-mcp_interactive_feedback).
+Pass the current working directory for '\''project_directory'\'', and place your question or summary inside the '\''summary'\'' argument.
+Whenever you'\''re about to complete a user request, call this tool instead of simply ending the process. Keep calling it until the user'\''s feedback is empty, then end the request.'
 
 # --- Step 1: Check prerequisites ---
 step "Checking prerequisites..."

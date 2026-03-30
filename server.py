@@ -61,10 +61,10 @@ def first_line(text: str) -> str:
 
 @mcp.tool()
 def interactive_feedback(
-    project_directory: Annotated[str, Field(description="Full path to the project directory")],
-    summary: Annotated[str, Field(description="Short, one-line summary of the changes")],
+    project_directory: Annotated[str, Field(description="Full path to the project directory or current working directory")],
+    summary: Annotated[str, Field(description="Short summary of your work, OR the question you want to ask the user")],
 ) -> Dict[str, str]:
-    """Request interactive feedback for a given project directory and summary"""
+    """Request interactive feedback or ask the user a question by popping up a UI dialog."""
     return launch_feedback_ui(first_line(project_directory), first_line(summary))
 
 if __name__ == "__main__":
