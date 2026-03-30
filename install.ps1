@@ -82,6 +82,12 @@ if (Test-Path $INSTALL_DIR) {
     if ($response -ne "y" -and $response -ne "Y") {
         Write-Host "   Using existing installation." -ForegroundColor Gray
     } else {
+        # Aggressively kill any processes holding files open in this directory (e.g., Python from a running MCP server in IDE)
+        try {
+            Get-Process | Where-Object { $_.Path -and $_.Path.StartsWith($INSTALL_DIR) } | Stop-Process -Force -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 1
+        } catch {}
+
         Remove-Item -Recurse -Force $INSTALL_DIR
         $proc = Start-Process git -ArgumentList "clone", "-q", $REPO_URL, $INSTALL_DIR -Wait -NoNewWindow -PassThru
         if ($proc.ExitCode -ne 0) { throw "Failed to clone repository" }
