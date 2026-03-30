@@ -1,0 +1,30 @@
+[project]
+name = "interactive-feedback-mcp"
+version = "0.1.0"
+description = "MCP server for interactive user feedback and command execution in AI-assisted development."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "nhatpse", email = "nhatpse@gmail.com" },
+]
+keywords = ["mcp", "feedback", "interactive", "ai", "development"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "fastmcp>=2.0.0",
+    "psutil>=7.0.0",
+    "pyside6>=6.8.2.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/nhatpse/Antigravity-MCP"
+Repository = "https://github.com/nhatpse/Antigravity-MCP"
+Issues = "https://github.com/nhatpse/Antigravity-MCP/issues"
